@@ -1,1 +1,17 @@
-_
+nav, footer {
+	background: #563d7c;
+}
+#mainContainer {
+	background-color:rgba(204,51,255,.5);
+}
+#contentContainer {
+	background-color:rgba(65,173,72,1);
+	min-height: 500px;
+}
+footer {
+	min-height: 250px;
+	margin-bottom: -20px;
+	box-sizing: border-box;
+	padding: 15px 0;
+	
+}
