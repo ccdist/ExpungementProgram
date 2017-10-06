@@ -9,7 +9,7 @@
 <? require_once("_includes/navbar.php"); ?>
 <div id="mainContainer" class="container-fluid"> <!-- gives main bg color, extends to screen width -->
 	<div id="contentContainer" class="container pt-1"> <!-- contains all content -->
-            <img class="img-fluid d-block" src="http://lorempixel.com/960/400" alt="placeholder">
+            <img class="img-fluid mx-auto d-block" src="http://lorempixel.com/960/400" alt="placeholder">
         <div class="container">            
             <div class="row">
                 <div class="article col-xs-12 col-sm-6 col-md-3">t commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor.</div>
