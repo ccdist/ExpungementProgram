@@ -3,5 +3,6 @@
 		
 	</div>
 </footer>
+<script src="_script/global.js"></script>
 </body>
 </html>
