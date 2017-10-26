@@ -1,8 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-	    <a href="<? echo $_SESSION['fileDirectory']; ?>index.php" class="navbar-brand">
-		    <img src="<? echo $_SESSION['fileDirectory']; ?>_images/Opening_Doors_Key.png" alt="logo" height="70">
-	    </a>
+	    <span id="logo" href="<? echo $_SESSION['fileDirectory']; ?>index.php" class="navbar-brand"></span>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 		</button>		
