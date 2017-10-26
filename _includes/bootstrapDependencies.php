@@ -1,6 +1,6 @@
-<script src="_script/jquery.min.js"></script>
-<script src="_script/popper.min.js"></script>
-<script src="_script/bootstrap.min.js"></script>
+<script src="<? echo $_SESSION['fileDirectory']; ?>_script/jquery.min.js"></script>
+<script src="<? echo $_SESSION['fileDirectory']; ?>_script/popper.min.js"></script>
+<script src="<? echo $_SESSION['fileDirectory']; ?>_script/bootstrap.min.js"></script>
 
 <!-- CDN VERSIONS OF LOCAL CODE 
 
