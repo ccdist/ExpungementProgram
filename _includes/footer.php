@@ -15,9 +15,9 @@
 				<ul>
 					<a href="#"><li>Link number 1</li></a>
 					<? if($_SESSION['loggedIn'] != 1){  
-						echo "<a href='login.php'><li>Admin Area</li></a>"; 
+						echo "<a href='_protected/adminHome.php'><li>Admin Area</li></a>"; 
 						} else { 
-							echo "<a href='logout.php'><li>Logout as Admin</li></a>"; 
+							echo "<a href='".$_SESSION['fileDirectory']."logout.php'><li>Logout as Admin</li></a>"; 
 						}
 					?>
 				</ul>
@@ -25,6 +25,6 @@
 		</div>
 	</div>
 </footer>
-<script src="_script/global.js"></script>
+<script src="<? echo $_SESSION['fileDirectory']; ?>_script/global.js"></script>
 </body>
 </html>
