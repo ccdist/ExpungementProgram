@@ -5,7 +5,7 @@
 				<p>804 Lincolnway West -- B 04 <br>
 					PO Box 11587 <br>
 					South Bend, Indiana 46616<br>
-				<a href="tel:5749312173">574-931-2173</a>
+				<a href="tel:5749312173"><i class="fa fa-phone" aria-hidden="true"></i> 574-931-2173</a>
 				</p>
 			</section>
 			<section id="map" class="col-lg-6 d-none d-lg-inline">
