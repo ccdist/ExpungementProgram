@@ -19,7 +19,7 @@ function getTestimonials($db){
 	        // fix the logic for creating the DIV tag				
             echo "  
 	            <article class='col-sm-12 col-md-6 col-lg-3 article" . $i . "'>
-		            <h5>" . $row['name'] . "</h5>
+		            <h5>" . $row['name'] . " said: </h5>
 		            <hr>
 		            <p><i class='fa fa-quote-left'></i> " . $row['messages'] . " <i class='fa fa-quote-right'></i></p>
 	            </article>";
