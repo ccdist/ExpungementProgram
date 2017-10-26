@@ -3,12 +3,12 @@ if ($_SERVER['REMOTE_ADDR'] == "::1"){
 	$server  = "localhost";
 	$username = "root";
 	$password = "root";
-	$database = 'C250209_ivyExpunge';
+	$database = '';
 } else {
-		$server  = "mysql905.ixwebhosting.com";
-		$username = "C250209_ivyAdmin";
-		$password = "BUmxohaFPux5";
-		$database = 'C250209_ivyExpunge';
+		$server  = "";
+		$username = "";
+		$password = "";
+		$database = '';
 
 	}
 
