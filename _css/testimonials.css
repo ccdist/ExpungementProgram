@@ -1,1 +1,34 @@
+article {
+	border-right: 3px dashed purple;
+	box-sizing: border-box;
+	padding: 20px;
+}
 
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 767px){
+	article {
+	border-right:none;
+	border-bottom: 3px dashed purple;
+}
+
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.article4, .article2 {
+		border-right:none;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.article2 {
+		border-right: 3px dashed purple;
+	}
+	.article4 {
+		border-right:none;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
