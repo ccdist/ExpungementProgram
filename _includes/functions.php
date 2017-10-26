@@ -70,16 +70,27 @@ function loginVerification ($db, $tablename, $username, $password){
     $queryForUsername = ("SELECT * FROM `$tablename` WHERE `username` = '$username'");
     $usernameResult = mysqli_query($db, $queryForUsername);
     $userInfo = mysqli_fetch_array($usernameResult);
-     
+     /*********************************************************
+	 //    THIS SECTION ON REMOVES SECURITY ON LOCAL SERVER   *
+	 *********************************************************/
+	if ($_SERVER['REMOTE_ADDR'] == "::1"){
+		$_SESSION['loggedIn'] = 1;
+		header("Location: ../_protected/adminHome.php?noProtectionOnLocalServer");
+		exit();
+    }
+     /*********************************************************
+	 //   ABOVE SECTION ON REMOVES SECURITY ON LOCAL SERVER   *
+	 *********************************************************/
     // check to see if user is in database
     if (mysqli_num_rows($usernameResult) < 1){
 	    	    
         $_SESSION['loginError'] = "Hold your horses! That Username and Password does not match!"; // set error log for display on login page
         header("Location: ../login.php?error=1"); // redirect user back to login if not in database
+        exit();
         
     } else {  //if username is in the database, check for matching password
 	    
-        if (password_verify($password, $userInfo['password'])){ 	        
+        if (password_verify($hashedPassword, $userInfo['password'])){ 	        
 	        
 			$_SESSION['loggedIn'] = 1; // raise flag for sucessful login
 			$_SESSION['loginError'] = 0; //delete login error flag if it had been raised
@@ -88,8 +99,8 @@ function loginVerification ($db, $tablename, $username, $password){
 		} else { // username matches, but password does not
 						
             $_SESSION['loggedIn'] = 0; // lower flag for failed login
-			$_SESSION['loginError'] = $_SESSION['loginError'] = "Password no match. Hold your horses! That Username and Password does not match!"; // set error log for display on login page
-			
+			$_SESSION['loginError'] = $_SESSION['loginError'] = "Hold your horses! That Username and Password does not match!"; // set error log for display on login page
+			exit();
         }
     }
     
