@@ -1,11 +1,11 @@
 <footer class="container-fluid">
 	<div id="footerMainContent" class="container">
-		<div class="row pt-2">
+		<div class="row pt-2 text-light">
 			<section id="address" class="col-sm-6 col-md-6 col-lg-3 pt-lg-5">
 				<p>804 Lincolnway West -- B 04 <br>
 					PO Box 11587 <br>
 					South Bend, Indiana 46616<br>
-					<tel>584-931-2173</tel>
+				<a href="tel:5749312173">574-931-2173</a>
 				</p>
 			</section>
 			<section id="map" class="col-lg-6 d-none d-lg-inline">
@@ -13,11 +13,11 @@
 			</section>
 			<section id="links" class="col-sm-6 col-md-6 col-lg-3">
 				<ul>
-					<a href="#"><li>Link number 1</li></a>
+					<li><a href="#">Link number 1</a></li>
 					<? if($_SESSION['loggedIn'] != 1){  
-						echo "<a href='_protected/adminHome.php'><li>Admin Area</li></a>"; 
+						echo "<li><a href='_protected/adminHome.php'>Admin Area</a></li>"; 
 						} else { 
-							echo "<a href='".$_SESSION['fileDirectory']."logout.php'><li>Logout as Admin</li></a>"; 
+							echo "<li><a href='".$_SESSION['fileDirectory']."logout.php'>Logout as Admin</a></li>"; 
 						}
 					?>
 				</ul>
