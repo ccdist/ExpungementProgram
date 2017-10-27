@@ -86,11 +86,10 @@ function loginVerification ($db, $tablename, $username, $password){
 	    	    
         $_SESSION['loginError'] = "Hold your horses! That Username and Password does not match!"; // set error log for display on login page
         header("Location: ../login.php?error=1"); // redirect user back to login if not in database
-        exit();
         
     } else {  //if username is in the database, check for matching password
 	    
-        if (password_verify($hashedPassword, $userInfo['password'])){ 	        
+        if (password_verify($password, $userInfo['password'])){ 	        
 	        
 			$_SESSION['loggedIn'] = 1; // raise flag for sucessful login
 			$_SESSION['loginError'] = 0; //delete login error flag if it had been raised
@@ -100,7 +99,6 @@ function loginVerification ($db, $tablename, $username, $password){
 						
             $_SESSION['loggedIn'] = 0; // lower flag for failed login
 			$_SESSION['loginError'] = $_SESSION['loginError'] = "Hold your horses! That Username and Password does not match!"; // set error log for display on login page
-			exit();
         }
     }
     
