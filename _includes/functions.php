@@ -133,7 +133,7 @@ function usernameUnavailable() {
 }
 
 //for registratin  page, username available
-function uernameAvailable(){
+function usernameAvailable(){
 	echo "register this bitch";
 }
 
